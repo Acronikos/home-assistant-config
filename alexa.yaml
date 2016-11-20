@@ -13,7 +13,7 @@ intents:
 
   LocateIntent:
     action:
-      service: notify.steam_alert
+      service: notify.pushbullet
       data_template:
         target: 'device/OnePlus One'
         message: sleep.c
