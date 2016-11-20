@@ -31,7 +31,7 @@ http:
   # Uncomment this to add a password (recommended!)
     api_password: !secret api_password
     ssl_certificate: !secret ssl_cert
-    ssl_key: !secret ssl_key
+    ssl_key: !secret ssl_priv
     trusted_networks:
       - 127.0.0.1
       - 192.168.1.133
