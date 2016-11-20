@@ -1,0 +1,44 @@
+- platform: mqtt
+  name: "Sleeping"
+  state_topic: "nfc/sleeping"
+  command_topic: "nfc/sleeping"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+- platform: mqtt
+  name: "Twitch Alerts"
+  state_topic: "nfc/twitch_alerts"
+  command_topic: "nfc/twitch_alerts"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+- platform: mqtt
+  name: "Steam Notifications"
+  state_topic: "nfc/steam_notifications"
+  command_topic: "nfc/steam_notifications"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+- platform: mqtt
+  name: "Presence Notifications"
+  state_topic: "nfc/presence_notifications"
+  command_topic: "nfc/presence_notifications"
+  qos: 1
+  payload_on: "yes"
+  payload_off: "no"
+  retain: true
+
+#- platform: mqtt
+#  name: "TestSwitch"
+#  state_topic: "smartthings/Bedroom Light/switch"
+#  command_topic: "smartthings/Bedroom Light/switch"
+#  qos: 1
+#  payload_on: "on"
+#  payload_off: "off"
+#  retain: true

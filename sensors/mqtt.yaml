@@ -1,0 +1,7 @@
+- platform: mqtt
+  name: "Steam State"
+  state_topic: "nfc/steam_notifications"
+
+- platform: mqtt
+  name: "Twitch State"
+  state_topic: "nfc/twitch_alerts"

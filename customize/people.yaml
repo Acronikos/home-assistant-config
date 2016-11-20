@@ -1,0 +1,13 @@
+device_tracker.android11ca087b094d6409:
+  icon: mdi:cellphone-android
+device_tracker.iphone:
+  icon: mdi:cellphone-iphone
+device_tracker.android6592e09712d652ea:
+  icon: mdi:cellphone-android
+sensor.kindlefire:
+  friendly_name: Kindle Fire
+  icon: mdi:tablet-android
+sensor.kindlevoyage:
+  friendly_name: Kindle Voyage
+  icon: mdi:book
+

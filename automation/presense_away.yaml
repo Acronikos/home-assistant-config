@@ -1,0 +1,24 @@
+# Notify when online on Steam.
+alias: Presence_Away
+trigger:
+  platform: state
+  entity_id:
+  - device_tracker.android11ca087b094d6409
+  - device_tracker.iphone
+  - device_tracker.android6592e09712d652ea
+  - device_tracker.androideb1efc5bc558db1f
+  from: 'home'
+  to: 'not_home'
+condition:
+- condition: state
+  entity_id: switch.sleeping
+  state: 'off'
+- condition: state
+  entity_id: switch.presence_notications
+  state: 'on'
+action:
+  service: notify.pushbullet
+  data_template:
+    title: "Presence notification."
+    message: >
+      {{ trigger.to_state.attributes.friendly_name }} has left.

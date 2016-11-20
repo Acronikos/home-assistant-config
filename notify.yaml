@@ -1,0 +1,9 @@
+- name: pushbullet
+  platform: pushbullet
+  api_key: !secret pushbullet
+
+- name: browser_alert
+  platform: html5
+
+- name: notify
+  platform: html5

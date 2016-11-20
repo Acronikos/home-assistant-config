@@ -1,0 +1,10 @@
+- platform: template
+  sensors:
+    androideb1efc5bc558db1f:
+      value_template: "{% if is_state('device_tracker.androideb1efc5bc558db1f', 'home') %}visiting{% else %}away{% endif %}"
+    monolith:
+      value_template: "{% if is_state('device_tracker.monolith', 'home') %}online{% else %}offline{% endif %}"
+    kindlefire:
+      value_template: "{% if is_state('device_tracker.kindlea86d6eaf4', 'home') %}online{% else %}offline{% endif %}"
+    kindlevoyage:
+      value_template: "{% if is_state('device_tracker.747548950f67', 'home') %}online{% else %}offline{% endif %}"

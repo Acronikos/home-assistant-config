@@ -1,0 +1,17 @@
+# Notify when online on Steam.
+alias: Steam_Status
+trigger:
+  platform: state
+  entity_id:
+  - group.steam
+  state: 'Online'
+condition:
+- condition: state
+  entity_id: switch.steam_notifications
+  state: 'on'
+action:
+  service: notify.pushbullet
+  data_template:
+    title: "Steam"
+    message: >
+      {{ trigger.to_state.attributes.friendly_name }} is online.

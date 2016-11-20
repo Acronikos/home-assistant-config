@@ -1,0 +1,5 @@
+- platform: twitch
+  channels:
+    - Yogscast
+    - Criken
+    - Hatfilms

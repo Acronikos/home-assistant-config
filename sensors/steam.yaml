@@ -1,0 +1,7 @@
+#### STEAM FRIENDS ##################################
+- platform: steam_online
+  api_key: !secret steam_api
+  accounts:
+      - !secret steam_nul
+      - !secret steam_kou
+      - !secret steam_ove

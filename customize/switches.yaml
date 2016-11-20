@@ -1,0 +1,8 @@
+switch.sleeping:
+  icon: mdi:sleep
+switch.twitch_alerts:
+  icon: mdi:twitch
+switch.steam_notifications:
+  icon: mdi:steam
+switch.presence_notifications:
+  icon: mdi:account-switch

@@ -1,0 +1,21 @@
+#  Alert when twitch streams go live.
+alias: Streaming
+trigger:
+  platform: state
+  entity_id:
+  - sensor.yogscast
+  - sensor.criken
+  - sensor.hatfilms
+  state: 'streaming'
+  for:
+    seconds: 30
+condition:
+- condition: state
+  entity_id: switch.twitch_alerts
+  state: 'on'
+action:
+  service: notify.pushbullet
+  data_template:
+    title: "Twitch Notification"
+    message: >
+      {{ trigger.to_state.attributes.friendly_name }} is streaming.

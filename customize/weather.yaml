@@ -1,0 +1,21 @@
+sensor.pws_station_id:
+   friendly_name: PWS Station ID
+   icon: mdi:fingerprint
+sensor.pws_weather:
+   friendly_name: Current Conditions
+   icon: mdi:beach
+sensor.pws_temp_f:
+   friendly_name: Temperature
+   icon: mdi:thermometer
+sensor.pws_feelslike_f:
+   friendly_name: Feels Like
+   icon: mdi:account-alert
+sensor.pws_relative_humidity:
+   friendly_name: Humidity
+   icon: mdi:water-percent
+sensor.pws_precip_today_string:
+   friendly_name: Precipitation
+   icon: mdi:weather-snowy-rainy
+sensor.pws_wind_mph:
+   friendly_name: Wind Speed (MPH)
+   icon: mdi:weather-windy

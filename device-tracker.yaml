@@ -1,0 +1,5 @@
+- platform: asuswrt
+  host: 192.168.1.1
+  username: !secret asus_user
+  password: !secret asus_pass
+  consider_home: 90

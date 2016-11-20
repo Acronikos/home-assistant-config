@@ -1,0 +1,51 @@
+intents:
+  WhereAreWeIntent:
+    speech:
+      type: plaintext 
+      text: >
+        {%- if is_state('device_tracker.android11ca087b094d6409', 'home') and
+               is_state('device_tracker.iphone', 'home') -%}
+          You are both home, you silly
+        {%- else -%}
+          iphone is at {{ states("device_tracker.iphone") }}
+          and Rick is at {{ states("device_tracker.android11ca087b094d6409") }}
+        {% endif %}
+
+  LocateIntent:
+    action:
+      service: notify.steam_alert
+      data_template:
+        target: 'device/OnePlus One'
+        message: sleep.c
+    speech:
+      type: plaintext
+      text: >
+        {%- for state in states.device_tracker -%}
+          {%- if state.name.lower() == User.lower() -%}
+            {{ state.name }} is at {{ state.state }}
+          {%- endif -%}
+        {%- else -%}
+          I am sorry, I do not know where {{ User }} is.
+        {%- endfor -%}
+
+  MonitorSleepIntent:
+    speech:
+      type: plaintext
+      text: Ok, I'll turn off your monitors now.
+    action: 
+      service: notify.pushbullet
+      data_template:
+        target: 'device/OnePlus One'
+        message: sleep.c
+
+flash_briefings:
+  whoishome:
+    - title: Who's at home?
+      text: >
+        {%- if is_state('device_tracker.android11ca087b094d6409', 'home') and
+               is_state('device_tracker.iphone', 'home') -%}
+          You are both home, you silly
+        {%- else -%}
+          iphone is at {{ states("device_tracker.iphone") }}
+          and Rick is at {{ states("device_tracker.android11ca087b094d6409") }}
+        {% endif %}
