@@ -9,6 +9,8 @@ trigger:
   - device_tracker.androideb1efc5bc558db1f
   from: 'home'
   to: 'not_home'
+  for:
+    minutes: 2
 condition:
 - condition: state
   entity_id: switch.sleeping
