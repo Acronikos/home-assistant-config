@@ -8,7 +8,7 @@ intents:
           You are both home, you silly
         {%- else -%}
           iphone is at {{ states("device_tracker.iphone") }}
-          and Rick is at {{ states("device_tracker.android11ca087b094d6409") }}
+          and oneplus is at {{ states("device_tracker.android11ca087b094d6409") }}
         {% endif %}
 
   LocateIntent:
@@ -47,5 +47,5 @@ flash_briefings:
           You are both home, you silly
         {%- else -%}
           iphone is at {{ states("device_tracker.iphone") }}
-          and Rick is at {{ states("device_tracker.android11ca087b094d6409") }}
+          and oneplus is at {{ states("device_tracker.android11ca087b094d6409") }}
         {% endif %}
