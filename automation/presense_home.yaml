@@ -3,7 +3,7 @@ alias: Presence_Home
 trigger:
   platform: state
   entity_id:
-  - device_tracker.android11ca087b094d6409
+#  - device_tracker.android11ca087b094d6409
   - device_tracker.iphone
   - device_tracker.android6592e09712d652ea
   - device_tracker.androideb1efc5bc558db1f
@@ -12,6 +12,9 @@ condition:
 - condition: state
   entity_id: switch.sleeping
   state: 'off'
+- condition: state
+  entity_id: switch.presence_notifications
+  state: 'on'
 action:
   service: notify.pushbullet
   data_template:
