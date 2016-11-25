@@ -4,6 +4,8 @@ device_tracker.iphone:
   icon: mdi:cellphone-iphone
 device_tracker.android6592e09712d652ea:
   icon: mdi:cellphone-android
+device_tracker.android119b5cef7a52d5f7:
+  icon: mdi:cellphone-android
 sensor.kindlefire:
   friendly_name: Kindle Fire
   icon: mdi:tablet-android
