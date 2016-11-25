@@ -40,6 +40,7 @@ People:
 - device_tracker.iphone
 - device_tracker.android6592e09712d652ea
 - device_tracker.androideb1efc5bc558db1f
+- device_tracker.android119b5cef7a52d5f7
 - sensor.kindlefire
 - sensor.kindlevoyage
 - switch.presence_notifications
