@@ -11,7 +11,7 @@ trigger:
   from: 'home'
   to: 'not_home'
   for:
-    minutes: 2
+    minutes: 3
 condition:
 - condition: state
   entity_id: switch.sleeping
